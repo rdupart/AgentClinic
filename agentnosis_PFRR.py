@@ -4,7 +4,6 @@ import anthropic
 #from transformers import pipeline
 import openai, re, random, time, json, replicate, os
 
-
 total_prompt_tokens = 0
 total_completion_tokens = 0
 total_tokens = 0
@@ -1375,16 +1374,24 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
             
             if "REQUEST TEST" in doctor_question:
                 try: 
-                    test_name = doctor_question.split("REQUEST TEST:")[-1].strip()
-
                     # Check if doctor is within test request limit
                     if doctor_tests_requested < max_tests_allowed:
                         # Check if test_name is a valid vital sign from the scenario
                         vital_signs = scenario.physical_exams.get("Vital_Signs", {})
-                        normalized_vital_keys = {normalize_test_name(k): k for k in vital_signs.keys()}
-                        test_name_norm = normalize_test_name(test_name)
-                        if test_name_norm == normalize_test_name("Vital Signs"):
-                            # Doctor requested "Vital Signs" as a group — return all of them
+                        test_text = doctor_question.split("REQUEST TEST:")[-1].strip()
+                        matched_test = None
+
+                        # Check for full vital signs
+                        if "vital signs" in test_text.lower():
+                            matched_test = "Vital Signs"
+                        else:
+                            # Flexible matching for individual vitals
+                            for vital_name in vital_signs:
+                                if normalize_test_name(vital_name) in normalize_test_name(test_text):
+                                    matched_test = vital_name
+                                    break
+
+                        if matched_test == "Vital Signs":
                             print(f"Doctor requested full set of Vital Signs.")
                             for vital_name, vital_value in vital_signs.items():
                                 test_result = f"{vital_name}: {vital_value}"
@@ -1393,20 +1400,20 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
                                 patient_agent.add_hist(test_result)
                                 meas_agent.add_hist(test_result)
                             doctor_tests_requested += 1
-                        elif test_name_norm in normalized_vital_keys:
-                            # Doctor requested a specific vital sign
-                            actual_key = normalized_vital_keys[test_name_norm]
-                            test_result = meas_agent.inference_measurement(f"REQUEST TEST: {actual_key.replace(' ', '_')}")
+
+                        elif matched_test:
+                            test_result = meas_agent.inference_measurement(f"REQUEST TEST: {matched_test.replace(' ', '_')}")
                             doctor_tests_requested += 1
                             print(f"Measurement [{progress}%]: {test_result}")
                             doctor_patient_dialogue += f"Doctor: {doctor_question}\nMeasurement: {test_result}\n"
                             patient_agent.add_hist(test_result)
+
                         else:
-                            print(f"[Invalid Test] Doctor requested non-vital test: '{test_name}' — Ignored.")
-                            doctor_patient_dialogue += f"Doctor: {doctor_question}\n[System]: Test '{test_name}' is not available.\n"
-                            patient_agent.add_hist(f"Doctor attempted to request an unavailable test: {test_name}")
-                            meas_agent.add_hist(f"Doctor attempted to request an unavailable test: {test_name}")
-                            continue
+                            print(f"[Invalid Test] Doctor requested non-vital test: '{test_text}' — Ignored.")
+                            doctor_patient_dialogue += f"Doctor: {doctor_question}\n[System]: Test '{test_text}' is not available.\n"
+                            patient_agent.add_hist(f"Doctor attempted to request an unavailable test: {test_text}")
+                            meas_agent.add_hist(f"Doctor attempted to request an unavailable test: {test_text}")
+
                     else:
                         print("Doctor has exceeded test request limit.")
                         doctor_patient_dialogue += f"Doctor: {doctor_question}\n[System]: Test request limit exceeded. No further tests allowed.\n"
@@ -1489,14 +1496,20 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
                 if "request test" in question.lower():
                     try: 
                         match = re.search(r"request test\s*:\s*(.+)", question.lower())
+                        
+                        
                         if match:
-                            test_name = match.group(1).strip().replace('\n', '').replace('\r', '')
-                            allowed_normalized = [normalize_test_name(t) for t in allowed_tests]
-                            test_name_norm = normalize_test_name(test_name)
+                            test_text = match.group(1).strip().replace('\n', '').replace('\r', '')
+                            matched_test = None
 
-                            if test_name_norm in allowed_normalized:
+                            for allowed_test in allowed_tests:
+                                if normalize_test_name(allowed_test) in normalize_test_name(test_text):
+                                    matched_test = allowed_test
+                                    break
+
+                            if matched_test:
                                 if specialist_tests_requested[specialist_name] < max_tests_allowed:
-                                    test_query = f"REQUEST TEST: {test_name}"
+                                    test_query = f"REQUEST TEST: {matched_test}"
                                     test_result = meas_agent.inference_measurement(test_query)
                                     specialist_tests_requested[specialist_name] += 1
                                     print(f"Measurement [{progress}%]: {test_result}")
@@ -1504,16 +1517,15 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
                                     patient_agent.add_hist(test_result)
                                 else:
                                     print(f"[LIMIT] {specialist_name} has exceeded their test request limit.")
-                                    dialogue += f"{specialist_name}: REQUEST TEST: {test_name}\n[System]: You have exceeded your test request limit.\n"
-                                    patient_agent.add_hist(f"{specialist_name} attempted test '{test_name}' but exceeded limit.")
-                                    meas_agent.add_hist(f"{specialist_name} attempted test '{test_name}' but exceeded limit.")
-                                    continue
+                                    dialogue += f"{specialist_name}: REQUEST TEST: {matched_test}\n[System]: You have exceeded your test request limit.\n"
+                                    patient_agent.add_hist(f"{specialist_name} attempted test '{matched_test}' but exceeded limit.")
+                                    meas_agent.add_hist(f"{specialist_name} attempted test '{matched_test}' but exceeded limit.")
                             else:
-                                print(f"[BLOCKED] {specialist_name} is not allowed to request test: {test_name}")
-                                dialogue += f"{specialist_name}: REQUEST TEST: {test_name}\n[System]: You are not permitted to order this test.\n"
-                                patient_agent.add_hist(f"{specialist_name} attempted unauthorized test '{test_name}'")
-                                meas_agent.add_hist(f"{specialist_name} attempted unauthorized test '{test_name}'")
-                                continue
+                                print(f"[BLOCKED] {specialist_name} is not allowed to request test: {test_text}")
+                                dialogue += f"{specialist_name}: REQUEST TEST: {test_text}\n[System]: You are not permitted to order this test.\n"
+                                patient_agent.add_hist(f"{specialist_name} attempted unauthorized test '{test_text}'")
+                                meas_agent.add_hist(f"{specialist_name} attempted unauthorized test '{test_text}'")
+
                         else:
                             print(f"[ERROR] Could not parse test request from specialist: {specialist_name}")
                             dialogue += f"{specialist_name}: {question}\n[System]: Could not understand the test request format.\n"
@@ -1526,28 +1538,35 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
                 if "request image" in question.lower():
                     match = re.search(r"request image\s*:\s*(.+)", question.lower())
                     if match:
-                        image_name = match.group(1).strip()
-                        normalized = normalize_test_name(image_name)
-                        allowed_images_norm = [normalize_test_name(img) for img in specialist.allowed_images]
+                        image_text = match.group(1).strip().replace('\n', '').replace('\r', '')
+                        matched_image = None
 
-                        if normalized in allowed_images_norm:
+                        for allowed_image in specialist.allowed_images:
+                            if normalize_test_name(allowed_image) in normalize_test_name(image_text):
+                                matched_image = allowed_image
+                                break
+
+                        if matched_image:
                             if specialist.images_requested < specialist.max_images_allowed:
                                 specialist.images_requested += 1
 
-                                # Pull the image findings from the scenario
-                                raw_key = image_name.replace(" ", "_")
+                                raw_key = matched_image.replace(" ", "_")  # Match the JSON format
                                 imaging_data = scenario.tests.get("Imaging", {}).get(raw_key, {})
                                 findings = imaging_data.get("Findings", "No findings provided.")
 
-                                print(f"[IMAGE] {specialist_name} requested image: {image_name}")
-                                dialogue += f"\n[{specialist_name} views {image_name}]\nFindings: {findings}\n"
-                                patient_agent.add_hist(f"{specialist_name} viewed image: {image_name}")
+                                print(f"[IMAGE] {specialist_name} requested image: {matched_image}")
+                                dialogue += f"\n[{specialist_name} views {matched_image}]\nFindings: {findings}\n"
+                                patient_agent.add_hist(f"{specialist_name} viewed image: {matched_image}")
                             else:
                                 print(f"[LIMIT] {specialist_name} exceeded image request limit.")
                                 dialogue += f"\n[System]: Image request limit reached.\n"
                         else:
-                            print(f"[BLOCKED] {specialist_name} not permitted to request: {image_name}")
-                            dialogue += f"\n[System]: You are not authorized to request image '{image_name}'.\n"
+                            print(f"[BLOCKED] {specialist_name} not permitted to request: {image_text}")
+                            dialogue += f"\n[System]: You are not authorized to request image '{image_text}'.\n"
+                    else:
+                        print(f"[ERROR] Could not parse image request from specialist: {specialist_name}")
+                        dialogue += f"{specialist_name}: {question}\n[System]: Could not understand the image request format.\n"
+                        patient_agent.add_hist(f"{specialist_name} made an unclear image request.")
 
                 time.sleep(1.0)
             #print(f"\n--- {specialist_name} Dialogue ---\n{dialogue}")
