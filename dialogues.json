@@ -1,0 +1,1069 @@
+[
+    {
+      "role": "Pathologist Review",
+      "dialogue": [
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "After reviewing the slides, the morphologic features are clearly neoplastic, but they don't fit the typical profile of cholangiocarcinoma. The imaging also doesn’t match the expected pattern for this disease."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "That's unusual. I agree, the tumor marker for cholangiocarcinoma is only weakly elevated. It’s not fitting with the clinical picture either. Should we consider additional diagnostic work?"
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "Yes, I think we need to do more testing on the biopsy material. It's crucial that we get to the bottom of this. Let’s rule out other possible conditions that might be presenting similarly."
+        }
+      ]
+    },
+    {
+      "role": "Oncology and Pathology Interaction",
+      "dialogue": [
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "When performing second opinions, it’s essential to investigate further if the initial diagnosis doesn't seem to fit. I’ve seen cases where the diagnosis didn’t align with imaging or lab results."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "I agree. The first diagnosis is often correct, but with rare cancers, it’s important to take a fresh look. In this case, after further review, I suspect it’s not cholangiocarcinoma, but rather epithelioid hemangioendothelioma (EHE)."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "EHE is rare, and that’s a game-changer. It’s a more indolent cancer and won’t respond to standard treatment for cholangiocarcinoma. We need to adjust our approach accordingly."
+        }
+      ]
+    },
+    {
+      "role": "Radiology Review",
+      "dialogue": [
+        {
+          "speaker": "Dr. Timothy Gilligan (Radiologist)",
+          "text": "I reviewed the previous imaging. There are masses, but they’re nonspecific and don’t have the typical characteristics of cholangiocarcinoma. I think we should consider alternative diagnoses."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "That’s an important observation. The imaging is ambiguous, which raises more questions. We may need to reassess the patient's eligibility for transplant as well, depending on what we find."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "Yes, and if we’re dealing with EHE, the lack of metastasis could actually make the patient eligible for a transplant. It’s critical we take all factors into account."
+        }
+      ]
+    },
+    {
+      "role": "Multidisciplinary Consultation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Shreeram Kamath (Hepatologist)",
+          "text": "We need to act quickly. The patient's liver failure is profound. Coordinating the liver transplant consultation with the oncologist and radiologist in one day will be key to speeding up the process."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "I agree. While pathology is crucial, we need to ensure that other specialists are aligned. For example, reviewing whether the lung nodules are metastases will be important."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Radiologist)",
+          "text": "The lung nodules don’t appear metastatic based on the scans, but I suggest a careful review to confirm. I think this patient should proceed with a liver transplant workup."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "Let's move ahead with a transplant evaluation. It's critical we get a definitive answer on the eligibility quickly, given the patient's deteriorating condition."
+        }
+      ]
+    },
+    {
+      "role": "Pre-Transplant Planning",
+      "dialogue": [
+        {
+          "speaker": "Amy McFarlin (Transplant Coordinator)",
+          "text": "We need to line up all the necessary appointments for the patient over the next few days. Given that the patient is from out of state, we need to be very methodical in making sure he meets transplant eligibility criteria."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "Yes, being systematic is the key. We can’t afford any delays. We need to ensure all the necessary evaluations are completed on time so we can move forward with the transplant."
+        },
+        {
+          "speaker": "Amy McFarlin (Transplant Coordinator)",
+          "text": "I’ve already started working on the schedule. Having everything planned out will help us expedite the process. We should be able to perform the transplant within 2.5 months of the initial consult."
+        }
+      ]
+    },
+    {
+      "role": "Post-Transplant Complications",
+      "dialogue": [
+        {
+          "speaker": "Dr. Shreeram Kamath (Hepatologist)",
+          "text": "The patient tolerated the transplant well initially, but we need to keep a close eye on any complications, particularly with hepatic artery thrombosis."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "Indeed, thrombosis in the hepatic artery can be serious. We’ll need to monitor liver function closely to detect any signs of ischemia."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Radiologist)",
+          "text": "We already have an ultrasound scheduled, and we’ll keep monitoring liver function tests. If thrombosis occurs, we should act quickly to remove the clot and ensure adequate perfusion."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "It’s a good sign that we caught it early. If we act quickly, the patient’s liver should recover well. The key is staying on top of the complications."
+        }
+      ]
+    },
+    {
+      "role": "Initial Treatment Discussion",
+      "dialogue": [
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "This patient's metastatic upper tract urothelial cancer has already spread to the lymph nodes, liver, and lungs. Given his poor response to chemotherapy, I’m recommending enfortumab vedotin, an antibody-drug conjugate that specifically targets nectin proteins on cancer cells."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "It’s a promising option. Clinical trials are just starting to show positive results with enfortumab vedotin, and I believe it could give him a better chance at survival than conventional chemotherapy. Let’s get him enrolled in the trial."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "The monoclonal antibody delivers the chemotherapy directly to the cancer cells, reducing the toxicity typically associated with chemotherapy. If he responds well, we may have a more sustainable treatment plan for him."
+        }
+      ]
+    },
+    {
+      "role": "Tumor Board Consultation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The patient has had a robust response to the enfortumab vedotin, but the tumor in his left kidney remains. Given his positive response, I believe we should proceed with consolidation surgery to remove the remaining tumor."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "I agree. The surgery will allow us to address the residual tumor in the kidney, and the chemotherapy has already decreased the cancer in the lymph nodes. His response to this treatment makes him a good candidate for surgery."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The nephroureterectomy procedure is a good option. I’ll perform this laparoscopically, which should reduce recovery time. The key point here is that the chemotherapy has made the lymph nodes clear of cancer, which gives us confidence moving forward."
+        }
+      ]
+    },
+    {
+      "role": "Post-Surgery Evaluation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The nephroureterectomy went well. The tumor was removed, and most of the lymph nodes we examined were clear of cancer. This is a positive outcome, especially considering the previous metastases."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "That’s great news. Now, the patient has to continue his recovery, but we’ll need to monitor closely for recurrence, especially given the aggressive nature of urothelial cancer."
+        }
+      ]
+    },
+    {
+      "role": "Tumor Board Discussion on Recurrence",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "It’s been about five years, and unfortunately, the patient has developed a recurrence in his bladder. The cancer is notorious for growing in new areas, and the bladder seems to be the next site of progression."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "This type of recurrence is not uncommon with urothelial cancer. We need to carefully consider the best approach now that the cancer has returned. He might benefit from a combination of surgery and intravesical therapy."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "Yes, bladder management is critical. I think we should start by surgically ablating the tumors in the bladder, followed by intravesical therapy. This could help prevent further tumor growth and maintain the patient’s quality of life."
+        }
+      ]
+    },
+    {
+      "role": "Intravesical Therapy and Follow-Up",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The patient underwent surgery to ablate the bladder tumors. Now, we’ll begin intravesical therapy, which can help stimulate his immune system and prevent additional cancer growth in the bladder."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "Intravesical therapy should work well as a preventive measure. The goal is to induce an immune response that will keep the bladder cancer from recurring again."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "We’ll follow up with regular scans and cystoscopies. The patient will continue to receive maintenance therapy every six months. This will be a long-term strategy to ensure he stays cancer-free."
+        }
+      ]
+    },
+    {
+      "role": "Final Discussion on Long-Term Management",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "It’s incredible to see this patient disease-free after so many years. He was given just months to live, and now he’s thriving with no active cancer treatment. The combination of surgery, chemotherapy, and immunotherapy really worked in his case."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "This is a real success story. The patient’s response to the antibody-drug conjugate and the subsequent management plan shows how personalized treatment can dramatically improve outcomes, even in advanced cancers."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The patient will continue on maintenance therapy, but it’s amazing that he’s not actively undergoing any cancer treatments at this point. It’s a testament to the multidisciplinary approach and the emerging therapies in urothelial cancer."
+        }
+      ]
+    },
+
+    {
+      "role": "Initial Diagnosis Review",
+      "dialogue": [
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "The previous pathology slides are neoplastic, but they don’t match cholangiocarcinoma or its variants. The imaging also doesn’t align with the expected profile for this disease. We need to consider alternatives."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "Given the weak tumor marker for cholangiocarcinoma and the poor response to treatment, I think we need to dig deeper. I suggest we do further diagnostic testing on the biopsy material."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "I performed additional testing on the biopsy, and I now suspect the patient has epithelioid hemangioendothelioma (EHE), not cholangiocarcinoma. This is rare but explains the discrepancies in imaging and pathology."
+        }
+      ]
+    },
+    {
+      "role": "Oncology and Pathology Consultation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "EHE is a rare condition, and it’s critical to confirm this diagnosis. Given the patient’s lack of response to chemotherapy, this new diagnosis could change our treatment approach entirely."
+        },
+        {
+          "speaker": "Dr. Clifton Fulmer (Pathologist)",
+          "text": "Yes, absolutely. It’s crucial we challenge the initial diagnosis when things don’t seem to fit. EHE is an indolent cancer, and it’s likely that the patient would benefit from a more tailored treatment plan."
+        }
+      ]
+    },
+    {
+      "role": "Tumor Board Consultation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "Now that we have a clear diagnosis of EHE, we should proceed with a liver transplant workup. The patient’s liver is in severe failure, and he’s not a candidate for surgery elsewhere."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "Given that the disease has spread to his lymph nodes, liver, and lungs, we need to act quickly. But we need to consider his overall eligibility for transplant. The lung nodules are concerning."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "The lung nodules do raise concern, but the scans suggest they’re not metastatic. It’s possible that the tumor cells have spread to the bladder or other parts, but we’ll need further imaging to confirm this."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "I agree. We can’t proceed with a transplant unless we’re confident that the nodules aren’t metastatic. Let's have the radiology team double-check the scans and then proceed with the transplant evaluation."
+        }
+      ]
+    },
+    {
+      "role": "Transplant Workup",
+      "dialogue": [
+        {
+          "speaker": "Amy McFarlin (Transplant Coordinator)",
+          "text": "The patient is coming from out of state, so we need to coordinate a series of appointments in a short time frame. I’ve arranged all the necessary tests, and we’re following a systematic approach to ensure he’s a candidate for the transplant."
+        },
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "Perfect. We need to be efficient to make sure the patient gets the transplant as quickly as possible. His liver function is failing fast, and we can’t afford to delay."
+        },
+        {
+          "speaker": "Amy McFarlin (Transplant Coordinator)",
+          "text": "I’ve arranged back-to-back consultations with the hepatology team, oncology, and surgery, so we can complete the workup in a single day."
+        }
+      ]
+    },
+    {
+      "role": "Pre-Surgery Preparation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Suneel Kamath (Oncologist)",
+          "text": "In preparation for the transplant, we need to ensure that the patient is physically stable. He’s been on diuretics for fluid buildup and regular paracentesis procedures to help manage his nutrition."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "We need to confirm that there are no varices that could complicate the surgery. I’ll perform endoscopies to check for any bleeding risks."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "This patient has a complex medical history, but I’m optimistic that with the right preparation, the transplant can proceed without major complications."
+        }
+      ]
+    },
+    {
+      "role": "Post-Transplant Discussion",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "The transplant was successful. We’ve had to monitor for potential complications, such as thrombosis in the hepatic artery, but we’ve managed to resolve it with surgery and maintain perfusion of the liver."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "It’s good to see that the patient tolerated the surgery well. We’ll continue to monitor his liver function and watch for signs of any recurrence. Given the nature of EHE, his prognosis is much better than with cholangiocarcinoma."
+        }
+      ]
+    },
+    {
+      "role": "Recurrence Management and Long-Term Follow-Up",
+      "dialogue": [
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "Unfortunately, the patient has had a recurrence of bladder cancer five years later. This cancer tends to grow where it lands. It’s likely the microscopic cells from his kidney have migrated into the bladder."
+        },
+        {
+          "speaker": "Dr. Timothy Gilligan (Medical Oncologist)",
+          "text": "This is a recurring challenge with urothelial cancer. We’ll need to act quickly to manage the recurrence, which may involve additional surgery and intravesical therapy."
+        },
+        {
+          "speaker": "Dr. Christopher Weight (Urologic Oncologist)",
+          "text": "We’ll perform another bladder ablation and start intravesical therapy to stimulate his immune system and prevent further recurrence. The good news is that his long-term prognosis is better thanks to the treatments we’ve used so far."
+        }
+      ]
+    }, 
+
+    {
+      "role": "Initial Case Overview",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Hi, and welcome to Clinical Case-Based Learning. We are here for a virtual tumor board in advanced prostate cancer. We're going to start with case number one, Mr. John Roberts, who has a prostate cancer recurrence."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Mr. Roberts is a 71-year-old man with a history of hypertension and locally advanced pT3N1M0 prostate adenocarcinoma. He's a Gleason 3+4 prostate cancer. He was treated initially, with radical prostatectomy and pelvic lymph node dissection in March, of 2018, shortly after his initial diagnosis. He did not opt for adjuvant radiation at the time, despite being pT3b, and his PSA was undetectable postoperatively. In September, of 2021, his PSA was detectable at 0.31, so starting to rise. And he underwent 18F-DCFPyL PSMA PET to inform his decision-making."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Before we get to that, I just want to share with everyone who is thinking about this case, that he is actually a pretty healthy guy. He is active. He spends a lot of time outdoors. He gardens, plays with his grandchildren. He has a couple of comorbidities, including hypertension and hypercholesterolemia. He's taking enalapril, simvastatin, and daily aspirin, and all of these are really well controlled. So he is generally, quite a well individual."
+        }
+      ]
+    },
+    {
+      "role": "Imaging Review",
+      "dialogue": [
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "Sounds good, Alicia. So we will review now, the PyL images. And for this first case, I will share how I tend to review these scans. So first I look at the projection image, which gives you a roadmap of what's normal body distribution and what's abnormal."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "So normal with most agents is evaluating PSMAs uptake in lacrimal glands and salivary glands. The thorax should be pretty clean. There is hepatobiliary clearance, as well as renal excretion. There are some uptakes throughout the GI tract, particularly in the duodenum. The rest is excretions through the ureters into the bladder."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "What stands out to me, are two areas of abnormal uptake in the pelvis. They should not be there. And with this in mind, we can go to other views. I would also just briefly emphasize this low-grade uptake in both axillary regions."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "Although we name this prostate-specific membrane antigen, it is well known that this is one of the best misnomers, because this is not prostate-specific. It's overexpressed in up to 90% of prostate cancer, but we do see things that are non-prostate cancer."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "Here we see bilateral axillary normal appearing lymph nodes, with fatty hilar, and not increased in size. These are probably just reactive changes. So keep that in mind, when reviewing these images."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "As we scroll down through the pelvis, we evaluate the retrograde duodenum, to make sure there are no abnormal lymph nodes, either by size or by uptake. As we arrive towards the pelvis, we pay closer attention, making sure that we are not missing lymph nodes."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "We follow the ureters going toward the bladder. This is still the ureter on the right, but now we see a small area of very intense uptake, which seems to be a nodule, probably a peritoneal implant adjacent to the bowel."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "This area, more anterior, is either a lymph node or another peritoneal implant. In this particular case, correlating with a relatively low PSA, we see small volume disease, that was not identified on anatomical imaging."
+        }
+      ]
+    },
+    {
+      "role": "Radiology and Treatment Discussion",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Great. Thanks. Those images are incredibly powerful. So thank you for going through those. And thank you also, for pointing out the axillary nodes. Because I do think, knowing that those are reactive, I think is really, really helpful."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "I do want to just leave the basic case up while we talk things through. And just to sort of recap, he is 71, he has a couple of comorbidities, but they are very well controlled, and he is functionally very, very active."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "And I think, pretty clearly, has a recurrence of his prostate cancer. He is not on any treatments at this time, no systemic therapies. And just as a reminder, he also did not receive any pelvic radiation in the past."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "So this is the first recurrence, he's hormone-sensitive, and has only had local treatment with a prostatectomy."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "From my perspective, usually, I think about pelvic radiation for patients who have this initial recurrence. And I do not think that is a slam dunk answer for this individual, given what we've just seen on this PSMA PET."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Hilary, can you talk us through how you think about pelvic radiation, what the benefit normally is, and how you would think about this patient, in the context of what we saw?"
+        }
+      ]
+    },
+    {
+      "role": "Radiation Considerations",
+      "dialogue": [
+        {
+          "speaker": "Hilary Bagshaw",
+          "text": "Great. Thank you. If someone came in with normal conventional imaging, but a rising PSA, to 0.3 for example, especially with his risk factors of pT3 disease and node positivity at the time of prostatectomy, I would definitely recommend pelvic radiation, including nodal irradiation and hormone therapy."
+        },
+        {
+          "speaker": "Hilary Bagshaw",
+          "text": "Typically, a short course, although there is some controversy in that. But given what we saw on the PET scan, I'm not sure that pelvic radiation would really benefit him."
+        },
+        {
+          "speaker": "Hilary Bagshaw",
+          "text": "What could potentially just give him toxicity without benefit, is that those two little peritoneal implants are not in the typical field that we would radiate."
+        },
+        {
+          "speaker": "Hilary Bagshaw",
+          "text": "We could certainly go after them, but the problem is, one of them is kind of right in around a bunch of bowel loops, and we really can't boost, right adjacent to bowel like that, as high as we would like to."
+        },
+        {
+          "speaker": "Hilary Bagshaw",
+          "text": "I think it's tough. He is relatively young and well, so one approach would be to follow him, and see how the disease kind of declares itself, versus potentially, starting him on hormone treatment now."
+        }
+      ]
+    },
+    {
+      "role": "Imaging Discussion Follow-Up",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "I appreciate you talking us through that. And I think, it also makes a difference, was this only identifiable, this disease, on DCFPyL PSMA PET imaging, or was this actually, something we could see on conventional imaging?"
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "Right. And we're choosing here, in the interest of time, to focus on the imaging that is contributory, the prior imaging was noncontributory."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Meaning it was negative."
+        },
+        {
+          "speaker": "Andrei Iagaru",
+          "text": "That is correct."
+        }
+      ]
+    },
+    {
+      "role": "Urologic Perspective",
+      "dialogue": [
+        {
+          "speaker": "Geoffrey Sonn",
+          "text": "Yeah, this is a tough one. It's something that we are going to run into in the coming years with more PSMA PET being done. What do we do in this setting of a new finding on PSMA PET, that is not seen on conventional imaging?"
+        },
+        {
+          "speaker": "Geoffrey Sonn",
+          "text": "The recent trials, looking at PyL PET, really do not address this yet, as to whether these new findings... It's quite clear that we are finding additional lesions we wouldn't have known about before, but whether this is changing the outcome of these patients for the better."
+        },
+        {
+          "speaker": "Geoffrey Sonn",
+          "text": "So from my perspective, here, we are left in a situation, where we don't have a clear-cut answer as to what to do."
+        }
+      ]
+    },
+
+    {
+      "role": "Introduction",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Hi, I'm so excited to be here from the Dana-Farber Brigham Cancer Center, where we have colleagues across a multidisciplinary specialty team to really talk about patients and think about how we can integrate PSMA PET scans into their care. Let's start with Dr. Kibel. Can you introduce yourself please?"
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "Sure. Hi, I'm Adam Stewart Kibel, I'm the Chief of Urology at the Brigham and the Dana-Farber. It's a pleasure to be here today."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Wonderful. Thank you. And Dr. Nguyen."
+        },
+        {
+          "speaker": "Paul Nguyen",
+          "text": "Hi, I'm Paul Nguyen, head of genetic urinary radiation oncology at the Dana-Farber Brigham, and professor of radiation oncology at Harvard Medical School."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Thank you. And Dr. Jacene."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "Hi, I'm Heather Jacene. I'm the clinical director of nuclear medicine at Dana-Farber and the assistant chief of nuclear medicine at Brigham and Women's Hospital."
+        }
+      ]
+    },
+    {
+      "role": "Case Overview",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Great. Let's get started. This is GR, a 63-year-old man with no significant past medical history. He's married, and a retired construction worker with three adult children. He has a family history of ovarian cancer in his sister. In September of 2021, he had a PSA of 6.5. In November, he went to a prostate biopsy, where they identified Gleason 3+3=6 GG 1 prostate adenocarcinoma in two cores on the right."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "And this was on review by our pathologist. He, on outside pathology, just had that Gleason 3+3=6 GG 1 in one core. So really, quite low-risk disease here. He was reviewed by the multi-D team at the time, and they decided on active surveillance for his low-risk localized disease. And genetic testing was performed because, of course, he had this family history, and was very interested in understanding what his risk might be."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "In March of 2022, he came in for three-month follow-up visits. At that time, they really discussed that he had identified a PALB2 mutation. Which is, I think, interesting, if we think about him potentially, or patients with this mutation, if they have advanced metastatic CRPC PALB2 mutations, seem to be really quite targetable with olaparib, for example, as a PARP inhibitor."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Additionally, of course, this patient had an MRI of the prostate in his follow-up, that identified a PI-RADS 5 lesion on the right, and concern for multiple enlarged pelvic lymph nodes. Of course, this was unexpected, given his two cores of Gleason 3+3. So the team's here to review the case. We did review that case, and of course, PSMA PET was ordered, to really help us understand better what was going on."
+        }
+      ]
+    },
+    {
+      "role": "Imaging Review",
+      "dialogue": [
+        {
+          "speaker": "Heather Jacene",
+          "text": "So we have here his PSMA PET CT scan. We can see, on the MIB image, a lot of normal biodistribution, salivary glands, kidneys, bowel, the bladder. We can see this focal intense PSMA uptake, which on the axials, is correlating to the location of the PI-RADS 5 lesion on the MRI."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "As we start to scroll up, looking for things outside of the prostate gland, we start to see some small lymph nodes. But then as you keep, some with low levels of PSMA uptake, but then as you scroll up, there are many large pelvic lymph nodes, external iliac, that are on both sides. They're really going up the entire iliac chain."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "You have first common and then periaortic lymph nodes. Now, these lymph nodes have much less intense PSMA uptake, compared to the primary lesion in the prostate gland. But as you continue to scroll up, there's a small retroperitoneal node with low-level uptake."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "As we keep going then, up into the chest, there were not a lot of mediastinal. There were some small, but not a large amount of mediastinal nodes, but then in the axle, you could again see enlarged lymph nodes, it's bilateral. Very low levels of PSMA uptake again."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "And as you continue to scroll up, there were also a lot of enlarged and many cervical lymph nodes, again with low levels of PSMA uptake. So, what's a little bit striking on the imaging is one, the focal, the uptake in the PI-RADS 5 lesion is very intense."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "But once we start to see multiple enlarged lymph nodes throughout the body, it raises the question of whether the nodes in the pelvis are related to the prostate cancer, or if it could be some other malignancy? And certainly, whenever we see diffuse lymphadenopathy, above and below the diaphragm, the question of lymphoma or another lymphoproliferative disorder, certainly comes to mind."
+        },
+        {
+          "speaker": "Heather Jacene",
+          "text": "And then, here with the lower levels of PSMA uptake, it also suggests that this possibly could be two different processes on the imaging."
+        }
+      ]
+    },
+    {
+      "role": "Discussion on Next Steps",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Great. That's really very, very helpful imaging. Thank you for that. So, Adam, I know this patient is your patient. I'm wondering if you can talk us through what you and the team thought about, or thinking about, as you're caring for this individual?"
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "Well, it was a lot to unpack here. I mean, the gentleman came in, and we told him he just needed to be on active surveillance. I'm a huge proponent of that. He wasn't going to need surgery. And mostly, we got the genetic testing, because of the family history."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "The MRI was being obtained at the same time because I generally get MRIs on patients that are on active surveillance unless there's a clear contraindication. And both came back around the same time, showing something that was alarming, particularly the lymph nodes. And so, it was very natural to then get a PSMA PET, to sort of understand if the lymph nodes were positive or not."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "I think one of the fascinating things about this is, this is medicine that we would not have been practicing three years ago. Genetic testing, PSMA testing, it really just shows where we're going."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "It was difficult to see the question around the PSMA testing. I think, one of the things that's important to recognize, we spend a lot of time talking about the sensitivity of the PSMA test not being perfect. By that I mean, it's about 40%, meaning patients with positive lymph nodes do have negative PSMA PETs, but the specificity in the OSPREY study was really outstanding. And so, that gave us the confidence to go ahead and proceed with surgery."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "Obviously, we discussed with him whether we need to get a biopsy of this. This was not a decision made in a vacuum. And we spent a lot of time deciding whether we need to biopsy the lymph nodes. And we did discuss radiation therapy with him. He's a relatively young individual, and he wanted to proceed with some more definitive therapy."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "And I guess lastly, the MRI was incredibly useful in making us feel that we were doing the right thing because he clearly did not have a low-risk prostate cancer on the base of that MRI."
+        }
+      ]
+    },
+    {
+      "role": "MRI Discussion",
+      "dialogue": [
+        {
+          "speaker": "Alicia Morgans",
+          "text": "Yeah. Let's comment on the MRI for just a second here. I think, this really suggests to me the importance of an MRI in the process of doing active surveillance."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "And I think, one of the uses there too, is to make sure that you've, as the urology team, you've really identified areas that might be higher risk, and you've biopsied those appropriately."
+        },
+        {
+          "speaker": "Alicia Morgans",
+          "text": "So it sounds like this is something that you're routinely integrating into your active surveillance protocols."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "Absolutely. I think that you need an MRI. I think that's well within the standard of care. And we don't just act on the MRI. There was a lot going on in this patient that pushed us towards just definitive surgical treatment. But usually, you biopsy to see what's going on."
+        },
+        {
+          "speaker": "Adam Kibel",
+          "text": "There are a couple of reasons for it. The first is, you want to make sure the MRI's accurate, there is some false positives associated with an MRI. And it can be incredibly useful for our radiation oncology colleagues, in terms of deciding whether the patient just needs radiation, or whether they need additional therapy, if they progress."
+        }
+      ]
+    },
+    {
+      "role": "Introduction",
+      "dialogue": [
+        {
+          "speaker": "Dr. Stone",
+          "text": "Hello, welcome to digesting IgG4-related disease, a session in which we will discuss two terrifically interesting cases that require multidisciplinary input from gastroenterology, rheumatology, radiology, and pathology, and probably additional specialties as well."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "Thank you, John. I’m Avinash KR, Chief of Abdominal Imaging at Mass General Hospital and Associate Professor at Harvard Medical School, and I'm delighted to be participating in this interesting Case Conference."
+        },
+        {
+          "speaker": "Dr. Lohr",
+          "text": "My name is Matthias Lohr. I'm the Professor of Gastroenterology and Hepatology at Karolinska Institute, and a Senior Consultant at the University Hospital."
+        },
+        {
+          "speaker": "Dr. Zen",
+          "text": "Hello, I'm Dr. Yoh Zen working at Institute of Liver Studies at Kings College Hospital in London, and Professor of liver histopathology and a Consulting Histopathologist."
+        }
+      ]
+    },
+    {
+      "role": "Case Presentation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Stone",
+          "text": "The patient presented at a very important time in the world, January 2020, right on the eve of the worldwide COVID pandemic. She was a 68-year-old woman who presented with abdominal pain, and she had weight loss. She lost 11 kilograms over the preceding year. She had frequent, watery stools, fatty oily stools."
+        },
+        {
+          "speaker": "Dr. Stone",
+          "text": "Her past medical history was relevant for a significant smoking history. She had a 45-year history of smoking, about 15-pack-years. She rarely drank alcohol. She also had a history of kidney stones, and that's relevant because that was a lot of the initial diagnostic consideration centered around that."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "Thank you, John. So, what we see here is two images from a contrast-enhanced CT done in January. We see an axial image and a coronal image. As you see, most of the findings are centered around the region of the head of the pancreas, the pancreatic head is edematous. There is also mild thickening of the medial wall of the duodenum, which is shown by the bright arrows."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "There are two cystic lesions, one in the region of the pancreatic or duodenal groove, and you also see some fat stranding of the fat in that region. There is another cystic lesion in the head of the pancreas. Additional findings, so you see there's dilatation of the common bile duct and also mild prominence of the pancreatic duct."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "Now, looking at all these findings, they point to three features, or things which are going on in the head of the pancreas. One, there is inflammatory changes in the region of the pancreatic/duodenal groove, so it's likely there is some element of groove pancreatitis."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "Secondly, there is a cystic lesion in the head of the pancreas which points to which could be secondary to the inflammation there or it could be a preexisting cyst. And thirdly, the dilatation of the common bile duct and the pancreatic duct up to the region of the head of the pancreas, I would like to get further evaluation to see what's happening in the head of the pancreas."
+        }
+      ]
+    },
+    {
+      "role": "Follow-Up and Imaging Discussion",
+      "dialogue": [
+        {
+          "speaker": "Dr. Stone",
+          "text": "Following this evaluation, the patient underwent an upper endoscopy, and the gastroscopy showed some mild bleeding and edematous mucosa of the descending duodenum and the endoscopist reported that the passage of the tube was somewhat difficult in that part of the duodenum."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "Oh, absolutely. Thank you, John. So, here again you see a coronal and axial CT image after contrast administration. The findings are similar to what we've seen in January, but there are some changes. For example, the cystic change, what we saw in the pancreatic or duodenal groove has improved."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "The peripancreatic inflammatory changes are slightly better, but there is persistent duodenal wall thickening. And an interesting finding here is that in addition to dilatation of the CBD, you also see some mild wall thickening of the common bile duct with enhancement, which usually indicates an inflammatory process."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "The cystic lesion in the head of the pancreas has slightly increased in size. I think it had increased by 5 millimeters."
+        }
+      ]
+    },
+    {
+      "role": "Surgical Consultation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Stone",
+          "text": "So, the surgical consultation follow-up. This is in March, now a month after starting the empiric therapy. There was substantial improvement and the patient had actually gained substantial amount of weight during this period."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "So, yes, so interesting CT findings. That is, you again use the axial and coronal CT images with contrast administration. The difference you see compared to the prior scans is the inflammatory changes have resolved, but you see increasing dilatation of the common bile duct and the pancreatic duct which seem to transition in the region of the pancreatic head."
+        },
+        {
+          "speaker": "Dr. Kambadakone-Ramesh",
+          "text": "And at the site where we earlier saw the cyst, there is a small area of nodular hyperdensity, which raises suspicion for a pancreatic head mass."
+        }
+      ]
+    },
+    {
+      "role": "Pathology Review",
+      "dialogue": [
+        {
+          "speaker": "Dr. Zen",
+          "text": "Yeah. So, patient had the Whipple procedure. So, basically pancreatic head, extrahepatic bile duct, and the duodenum were resected and blocked. So, this is the one axial slice of the pancreatic head."
+        },
+        {
+          "speaker": "Dr. Zen",
+          "text": "We have duodenal mucosa on the lefthand side, and as you can see, there are multiple inks on the specimen. So, these colors help us to understand the anatomical location. And the main lesion that is highlighted by A. We have ill-defined mass lesion on the center of the pancreatic head, and it clearly shows direct invasion into the duodenal wall."
+        },
+        {
+          "speaker": "Dr. Zen",
+          "text": "So, histologically, there is a direct trend with cancer. So, the most likely explanation is that the pancreatic cancer in this case, derived from pre-existing premalignant IPMN. That is the interpretation of this finding."
+        }
+      ]
+    },
+    {
+      "role": "Case Presentation",
+      "dialogue": [
+        {
+          "speaker": "Susana M. Campos, MD, MPH",
+          "text": "Thanks. I’d like to share with you guys a case that’s quite interesting. It’s a 44-year-old premenopausal woman who presented to her gynecologist complaining of weakness and vague abdominal discomfort for a duration of about 4 months."
+        },
+        {
+          "speaker": "Susana M. Campos, MD, MPH",
+          "text": "Her past medical history is mainly unremarkable. She has 2 children and has always had a normal menstrual cycle. In terms of her family history, both of her parents are living. There is a history of lung cancer on her father’s side."
+        },
+        {
+          "speaker": "Susana M. Campos, MD, MPH",
+          "text": "On a physical examination, what was dominant was really right-sided abdominal tenderness and swelling. Imaging studies were done, which showed a right-sided solid cystic adnexal mass, measuring about 8.8 centimeters in size."
+        },
+        {
+          "speaker": "Susana M. Campos, MD, MPH",
+          "text": "There was periaortic lymphadenopathy, omental caking, a solitary liver lesion, and a splenic mass. A percutaneous biopsy did show high-grade ovarian adenocarcinoma."
+        }
+      ]
+    },
+    {
+      "role": "Pathology Review",
+      "dialogue": [
+        {
+          "speaker": "Robert L. Coleman, MD",
+          "text": "OK, so it was a good case. It is one we see frequently. First, talk a little about the pathology. Give us your thoughts on what you are thinking about this pathology."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "Particularly as a pathologist, we’re just looking at tissue initially on an H&E [hematoxylin and eosin stain] slide. There are certain morphologic features for which we’re thinking about, depending on the specific diseases. In this case, they’re saying high-grade ovarian cancer. So we’re usually looking for more of a serous morphology. And then it’s an adenocarcinoma, so it’s a gland-forming tumor. The pathologist is not going any further than that without immunohistochemistry."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "So typically, a pathologist will use a panel marker—a PAX8 transcription factor—to kind of confirm that it’s of Mullerian origin. And then, with the high-grade serous, they tend to uniformly actually have a p53 mutation."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "So on immunohistochemistry, there are actually 2 phenotypes. There are the high expressors, where all of the tumor cells would have p53; or the null phenotype, where none of the cells have p53."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "And actually, when we do further molecular testing, this correlates with the actual underlying p53 mutation we see. With the TP53 missense mutations, these are always the high expressors that actually stabilize the p53 protein. Whereas the p53 frame shifter truncating correlate with loss of function. And so, that’s kind of consistent with the high-grade serous."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "In ovarian, a lot of times we’ll use a marker like WT1, and that’s kind of what tends to be seen a little bit more somewhere in the peritoneum, indicating a peritoneal origin."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "But there is kind of extensive literature now on what’s called high-grade serous ovarian carcinoma really originating in the fallopian tubes. So women had been getting prophylactic BSOs [bilateral salpingo-oophorectomies], who were germline BRCA1 and BRCA2 carriers."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "And a number of groups set up protocols to really section through the end of the fallopian tube and looked for lesions there. They found these serous tubal intraepithelial carcinomas [STICs], which were believed to potentially be the origin for these ovarian carcinomas."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "And then, work came out in Nature Communications. Even before the serous tubal intraepithelial carcinoma, which would be a morphologic diagnosis, you can perform a p53 immunostain and see a precursor lesion."
+        },
+        {
+          "speaker": "Gregory Riedlinger, MD, PhD.",
+          "text": "And so, it was really beautiful work. They went with a number of diagnosed ovarian cancers that had actually metastasized and went from these p53 precursor lesions, performed laser capture microdissection on p53 immunostain, the STIC lesions, or the ovarian cancers, and then the metastasis, and showed that these basically all have the same truncal origin. As they spread, they acquire additional mutations showing that the high-grade serous ovarian cancers are originating in the fallopian tubes."
+        }
+      ]
+    },
+    {
+      "role": "Discussion on Origin of Ovarian Cancer",
+      "dialogue": [
+        {
+          "speaker": "Robert L. Coleman, MD",
+          "text": "That’s a really important distinction. This is an area that’s evolved. Everybody puts up a textbook. They talk about ovarian cancer and they still talk about the origin on the surface of the ovary. I think it’s an important discussion and I appreciate that feedback."
+        }
+      ]
+    },
+    {
+      "role": "Case Presentation",
+      "dialogue": [
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Today we'll be discussing the treatment and management of non–small cell lung cancer in three patient case studies. Our first installment will focus on the management of locally advanced non–small cell lung cancer. Mr. JB is a 62-year-old male, 45-pack-year former smoker."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "His past medical history is significant for diabetes, stage 3 chronic kidney disease, and COPD. He presented with shortness of breath and cough. Chest CT, the images that you see on the right-hand side of your screen demonstrated a right lower lobe peribronchial thickening, atelectasis, and tree-and-bud opacities, as well as an enlarged subcarinal lymph node, about 3.5 by 2.4 cm."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "On PET scan, that same subcarinal node and right lower lobe pulmonary nodule showed FDG avidity and there was also right perihilar thickening. A bronchoscopy was performed that showed squamous non–small cell lung cancer at the level of 4R and level 7. NGS and PD-L1 testing were obtained."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "PD-L1 expression was low at 15%, although his TMB was high, 19.2 mut/Mb, he had a KIT amplification, FGFR amplification, PIK3 amplification, and this tumor was MSS."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "The case was presented at tumor board. Maybe we'll pause here to begin our discussion. Maybe I'll start with Dr. Velcheti. A T2aN2 squamous cancer. Prior to 2022 when chemo-IO was first approved, what would your tumor board at NYU have recommended for this patient?"
+        }
+      ]
+    },
+    {
+      "role": "Tumor Board Discussion",
+      "dialogue": [
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "I wish I could say clinical trial, CheckMate 816 or KEYNOTE-671. But as you know, the care paradigms for locally advanced non–small cell lung cancer pretty varied across the country and mostly because of access issues and access to thoracic surgeons like minimally invasive thoracic surgeons and obviously variations in terms of clinical practice patterns and access to pulmonary colleagues for adequate staging upfront."
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "So there are a lot of factors to consider, but for somebody like this with T2aN2 who looks like, based on the imaging, looks like it could potentially be a lobe, it's slightly central. It's hard to say, but it looks like it may be a lobe. It's not a huge tumor and looks like minimal mediastinal adenopathy. So probably this is somebody I probably would've done chemo-RT with an intent to take to surgery."
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "But of course now we have more data with the new adjuvant chemo-IO trials with CheckMate 816 and also KEYNOTE-671. So I probably would not do that right now. I'd probably offer chemo-IO to this patient."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Dr. Yu, any differences in practice patterns with your tumor board either before or after March of 2022?"
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "Yeah, I think that this is such an interesting question. I think if you go to different centers for stage III disease or any locally advanced disease, you really get different answers and kind of depends on where you trained and where you are now."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "So at MSK, we don't do sort of preoperative chemo RT, so we kind of go down the path of resection or definitive chemoradiation right at the outset. So when looking at the case for me, the N2 nodes are relatively bulky at 3.5 cm and there were two positive stations."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "And so usually, honestly, multistation N2 disease, certainly pre–chemo-IO, we would've sent this person to concurrent chemo-RT. And then as Dr. Velcheti had mentioned, I think post we’re much more, I think lenient might not be the right word, but we're open to trying chemo-IO in patients with more advanced disease."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Yeah, let's move forward because of course, this patient was treated in late 2023, and actually we decided for chemo-IO, three cycles. The patient had a squamous cancer, and so he received three cycles of carboplatin, paclitaxel and nivolumab according to the Checkmate 816 trial data."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "His course was complicated by anemia and thrombocytopenia after every dose, and it required dose delays, blood transfusions. I finally had to dose reduce in the third cycle in order to feel as though I could treat him safely. Which brings up an interesting question, Dr. Yu, maybe I'll start with you."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "I think that it's a good question because of course in metastatic disease, our kind of treatment goals are palliative vs in this setting where we're trying to get someone to a curative resection, I don't necessarily change my behavior. I mean, I think we use, if someone seems to be high risk, and certainly with the use of carboplatin, I might use growth factor support to help with the neutropenia, but here with the anemia and thrombocytopenia, you're really, you need the marrow to recover."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "So I would've done exactly as you did. I think we delay. And then absolutely, I think if it sort of is coming to a head, I don't have any problems with dose reduction in this setting. But yeah, I think there's always a little bit more of a nervousness to delay and kind of further back out surgery. But I don't treat anything particularly different."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "I did go to the NCCN Guidelines last night to make sure—you mentioned growth factor support, and of course for patients that are getting chemo-RT, we worry a little bit more about growth factor support and have for patients getting treatment for stage III cancers."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "But in this case, even if it is a stage III cancer in the neoadjuvant setting, the NCCN says that this is a regimen that has moderate risk for count suppression and cytopenias. And so growth factor support is allowed and recommended even."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Now, the best news ever is when one's neoadjuvant therapy results in downstaging of the patient's tumor. And that was the case for this gentleman, JB, where the path at final resection showed a complete response to therapy."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Dr. Johnson's first complete response after a lot of trying. So this opens up another chapter in this patient's treatment course, and that is in the adjuvant setting. So we've given three cycles. We've got a complete response at the time of resection. What do you do now? Dr. Velcheti, what would you recommend to this patient?"
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "Yeah, I think this is a really good problem to have. We don't have, at this point, we don't have ways to select adjuvant therapy post–chemo-IO. Of course, the CheckMate 816 had only the new adjuvant three cycles of chemo-nivo or chemo and nivo and no adjuvant approach."
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "But again, we've seen the data, the subgroup data, like in patients who have achieved a complete pathologic response, they did really well with very low recurrence rates. And we see that in CheckMate 816 and also in KEYNOTE-671 and other trials as well."
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "So there's certainly, it's reasonable to just watch without any adjuvant therapy here. But again, part of me also, I'm a little worried because this is a patient who had such a great response to chemo and IO. Would three cycles just be enough, would maybe give a few additional cycles of IO post surgery."
+        },
+        {
+          "speaker": "Dr. Vamsidhar Velcheti",
+          "text": "But again, that's very theoretical. We don't have answers right now. I know there are trials currently ongoing looking at personalizing adjuvant therapy approaches based on responses at the time of surgery. So we just don't have that information at this point. But for this patient, I probably would just watch."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "I think the flip side is so much more of a conundrum when we see lack of a good response and we review that pathology with our patients and they're kind of like, that's it, doc? It was still there, that I think it's hard with CheckMate 816, as you said, Dr. Velcheti, there isn't anything after, even if the response is not a major pathologic response or complete response."
+        },
+        {
+          "speaker": "Dr. Helena Yu",
+          "text": "And so that does feel unsettling. And so I think I'm looking forward to those studies that will have sort of risk adaptive or pathology adaptive post-resection treatment options for our patients."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "I think this rounds out this discussion of case 1 and Mr. JB really nicely. Some key clinical takeaways are that the CheckMate 816 trial as well as KEYNOTE-671, demonstrated that the addition of immunotherapy to chemotherapy improved the chance of event-free survival by a median of 10 months and resulted in path CR rates, so no more cancer 24% of the time with chemo-IO vs only 2% with chemo alone."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Just like Mr. JB, tumors with N2 lymph nodes may be completely resected, even if there are N2 lymph nodes at more than one station, which is different from how we used to treat patients with chemo-RT."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "And the data is still unclear about the benefit of additional adjuvant therapy for patients with complete responses since only 20% of patients treated in CheckMate 816 received additional adjuvant therapy according to investigator discretion."
+        },
+        {
+          "speaker": "Dr. Melissa Johnson",
+          "text": "Thanks for joining us. This brings us to the end of this case."
+        }
+      ]
+    },
+    {
+      "role": "Case Introduction",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "Welcome, everyone, to our case-based panel discussion today. I'm Ibiayi Dagogo-Jack. I'm accompanied by three excellent physicians as well. So Natalie Vokes, Catherine Arbour and Joshua Reuss. I'm going to call everyone by their first names. And so let's dive into the first case."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "Today we're hoping to discuss three cases and how we think about management. So these are quite diverse cases of a variety of presentations and I think that there's a lot of opportunity for discussion and we may have differences in our practice patterns."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "So the first patient presentation. This is a 50-year-old woman who is presenting with wheezing and one second wheezing and cough. Her clinical history is notable for she has anxiety and hypertension and she quit smoking about 20 years ago. She has a ten-year smoking history."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "She has no known family history of lung cancer, but she does have a family history of breast cancer. She works as a teacher. And because of this cough and wheezing, her primary care provider refers her for imaging."
+        }
+      ]
+    },
+    {
+      "role": "Imaging Review",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "Captured here is her chest CT. We see a right lung nodule versus mass. And I guess let's pause here for a second. And Natalie, if you were seeing this patient in your clinic, what might be the next steps as far as imaging?"
+        },
+        {
+          "speaker": "Dr. Natalie Vokes",
+          "text": "So I would definitely be concerned based on this initial chest CT that she has a potential lung cancer. And so usually I would, in parallel, work on getting a biopsy of this mass to confirm with the tissue diagnosis that this is actually lung cancer."
+        },
+        {
+          "speaker": "Dr. Natalie Vokes",
+          "text": "And then to save time, I would also think about trying to complete her staging workup. So for lung cancer, we almost always stage our patients with a PET CT and a brain MRI. So I would order those just to get a sense of whether she has any disease that spread outside of the chest."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And so that is essentially what we did. So she had a PET scan which is captured here. And so this isn't the best image of a PET scan. Some of you may have had PET scans where your doctor showed you the images where things light up in different colors. But this is a version of the PET scan where we're doing a non-diagnostic CT with it and it doesn't have the same colors."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And so I've highlighted the key areas of the PET scan for you. That nodule that we saw, it's a little bit of a different orientation, but that nodule that we saw in the right lung is bright. So it shines up as white on that black background."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And there's also a little bit of brightness near the windpipe and a lymph node that we call a tracheal lymph node. We tend to think of these as stage three lymph nodes not captured here. There's also a lymph node called a halo lymph node that is bright too."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And I should note that we don't have the images here, but her brain scan looked fine. There were no suspicious areas there and there was nothing outside of the chest that looks suspicious."
+        }
+      ]
+    },
+    {
+      "role": "Diagnosis and Treatment Plan",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "As Natalie said in staging, this involves getting these studies as well as a tissue diagnosis, a biopsy of some sort, and based on the positioning of the tumor or the suspicious areas here, she had a bronchoscopy where they actually put a camera down the airway and they took pieces of the lymph nodes that look abnormal here and confirmed that there was cancer there, and particularly a type of cancer called adenocarcinoma or non-small cell lung cancer."
+        },
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And so based on all the information we have at hand, this is consistent with what we consider a stage three lung cancer."
+        }
+      ]
+    },
+    {
+      "role": "Case Introduction",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "And so I guess for you, Kathryn, when you meet a patient, if this person is coming to your clinic at this point with a stage three lung cancer, are there any additional studies that you tend to order to help guide your treatments? And what are you thinking as far as treatment?"
+        }
+      ]
+    },
+    {
+      "role": "Discussion on Testing and Treatment Approach",
+      "dialogue": [
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "I think the management of stage three lung cancer is sometimes institution dependent, and it depends on what the practice policy of your hospital is, what the perspective of a multidisciplinary team. But this is really an aspect in which multiple different services can come together to find out how best to manage a patient's lung cancer."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "For a particular patient, that might mean radiation. For a particular patient, that might mean surgery, that might mean systemic therapies, which US medical oncologists give, and to guide that choice of systemic therapy, I find that molecular testing, at least to identify the most common alterations, is frequently helpful."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "And that molecular testing includes, for me, both PD-L1 testing to get a sense of how likely immunotherapy may be additionally beneficial for a patient, as well as testing to identify common driver oncogenes or mutations in lung cancer, such as EGFR mutations or ALK rearrangements that may make someone less likely to respond to immunotherapy but may identify someone for clinical trials in this space."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "So this is the type of testing, if it can be done efficiently and pretty rapidly, that can be done in parallel with the rest of these consultations."
+        }
+      ]
+    },
+    {
+      "role": "Discussion on Next Generation Sequencing",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "Yeah. And sometimes we hear words like next generation sequencing or single gene test. In your practice, do you tend to do next generation sequencing and what is that? Why is how is that different than just looking for EGFR?"
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "So next generation sequencing is, you know, a fancy term, but really means kind of looking at multiple different alterations in practice. So not doing single gene testing."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "The problem and the challenge of single gene testing is if you use up a piece of the biopsy for one gene and then another piece of a biopsy for another gene and another gene, you can run out of biopsy material and still not get a comprehensive answer."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "Next generation sequencing may encompass a panel of over 500 genes, may encompass a panel of the more common 80 genes that we look at, or even smaller than that."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "But really, we're looking for the more common alterations in non-small cell lung cancer that have what we call actionable mutations, mutations that we may have a targeted therapy involved for."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "And I would argue in the metastatic setting, the timing is important, but sometimes we can wait for this in this setting of early stage disease. We really want to get to that answer relatively quickly and pretty small panels can get to that answer fairly efficiently and really I think should be considered standard of care for all patients and are generally covered by insurance as well."
+        },
+        {
+          "speaker": "Dr. Kathryn Arbour",
+          "text": "And so we encourage that testing to be performed."
+        }
+      ]
+    },
+    {
+      "role": "Closing Discussion on Treatment Intent",
+      "dialogue": [
+        {
+          "speaker": "Dr. Ibiayi Dagogo-Jack",
+          "text": "Yeah. So think that you're exactly right. So it's always a tension, right, between getting all the information we need and getting it as quickly as possible, especially in this setting, which I will point out for stage three lung cancer, The treatments that we're giving are intent is to cure you of the cancer in this setting."
+        }
+      ]
+    }
+  ]
+  
+  
+  
+  
+  
