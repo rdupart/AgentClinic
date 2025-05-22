@@ -3,11 +3,8 @@ import argparse
 import anthropic
 #from transformers import pipeline
 import openai, re, random, time, json, replicate, os
-import sys
-import io
+from openai import OpenAI
 
-# Wrap sys.stdout to encode to utf-8 and replace errors gracefully
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 
 total_prompt_tokens = 0
@@ -16,34 +13,34 @@ total_tokens = 0
 
 def call_openai_chat(messages, **kwargs):
     global total_prompt_tokens, total_completion_tokens, total_tokens
-    response = openai.ChatCompletion.create(
-        model="gpt-4.1-mini",
+    response = client.chat.completions.create(
+        model="deepseek-chat",
         messages=messages,
         **kwargs
     )
-    usage = response.get('usage', {})
-    total_prompt_tokens += usage.get('prompt_tokens', 0)
-    total_completion_tokens += usage.get('completion_tokens', 0)
-    total_tokens += usage.get('total_tokens', 0)
+    usage = response.usage if hasattr(response, 'usage') else {}
+    #total_prompt_tokens += usage.get('prompt_tokens', 0)
+    #total_completion_tokens += usage.get('completion_tokens', 0)
+    #total_tokens += usage.get('total_tokens', 0)
 
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
 
-def query_model(backend, prompt, system_prompt="", image_requested=False, scene=None, **kwargs):
+def query_model(backend, prompt, system_prompt="", image_requested=False, scene=None):
     global total_prompt_tokens, total_completion_tokens, total_tokens
-    if backend.startswith("gpt"):
-        response = openai.ChatCompletion.create(
-            model="gpt-4.1-mini" if backend == "gpt4" else backend,
+    if backend.startswith("deepseek"):
+        response = client.chat.completions.create(
+            model="deepseek-chat" if backend == "deepseek" else backend,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.5,
+            temperature=0.7,
         )
-        usage = response.get('usage', {})
-        total_prompt_tokens += usage.get('prompt_tokens', 0)
-        total_completion_tokens += usage.get('completion_tokens', 0)
-        total_tokens += usage.get('total_tokens', 0)
-        return response['choices'][0]['message']['content']
+        usage = response.usage if hasattr(response, 'usage') else {}
+        #total_prompt_tokens += usage.get('prompt_tokens', 0)
+        #total_completion_tokens += usage.get('completion_tokens', 0)
+        #total_tokens += usage.get('total_tokens', 0)
+        return response.choices[0].message.content
     else:
         raise NotImplementedError(f"Model backend {backend} not supported yet.")
 
@@ -294,7 +291,7 @@ class ScenarioLoaderNEJM:
 
 
 class PatientAgent:
-    def __init__(self, scenario, backend_str="gpt4", bias_present=None) -> None:
+    def __init__(self, scenario, backend_str="deepseek", bias_present=None) -> None:
         # disease of patient, or "correct answer"
         self.disease = ""
         # symptoms that patient presents
@@ -383,7 +380,7 @@ class PatientAgent:
 
 
 class DoctorAgent:
-    def __init__(self, scenario, backend_str="gpt4", max_infs=20, bias_present=None, img_request=False) -> None:
+    def __init__(self, scenario, backend_str="deepseek", max_infs=20, bias_present=None, img_request=False) -> None:
         # number of inference calls to the doctor
         self.infs = 0
         # maximum number of inference calls to the doctor
@@ -496,7 +493,7 @@ class DoctorAgent:
             return diagnosis.strip()  # Ensure to clean up the result
 
 class SpecialistAgent_AsDoctor:
-    def __init__(self, specialty, allowed_images, allowed_tests, scenario, backend_str="gpt4", max_infs=20, bias_present=None, img_request=False) -> None:
+    def __init__(self, specialty, allowed_images, allowed_tests, scenario, backend_str="deepseek", max_infs=20, bias_present=None, img_request=False) -> None:
         self.specialty = specialty  # e.g. "Neurologist"
         # number of inference calls to the doctor
         self.infs = 0
@@ -625,7 +622,7 @@ def generate_doctor_report(doctor_agent, patient_agent, mode="medical_report"):
 
 
 class MeasurementAgent:
-    def __init__(self, scenario, backend_str="gpt4") -> None:
+    def __init__(self, scenario, backend_str="deepseek") -> None:
         # conversation history between doctor and patient
         self.agent_hist = ""
         # presentation information for measurement
@@ -666,7 +663,7 @@ class MeasurementAgent:
 
 
 class SpecialistAgent:
-    def __init__(self, specialty, scenario, medical_report=None, backend="gpt4"):
+    def __init__(self, specialty, scenario, medical_report=None, backend="deepseek"):
         self.specialty = specialty
         self.scenario = scenario
         self.backend = backend
@@ -740,8 +737,8 @@ def get_specialist_names_by_diagnosis(correct_diagnosis):
     {correct_diagnosis}
     """
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4.1-mini",
+    response = client.chat.completions.create(
+        model="deepseek-chat",
         messages=[
             {"role": "system", "content": "You are a concise assistant."},
             {"role": "user", "content": prompt}
@@ -750,7 +747,7 @@ def get_specialist_names_by_diagnosis(correct_diagnosis):
         temperature=0.3,
     )
 
-    specialists_text = response['choices'][0]['message']['content'].strip()
+    specialists_text = response.choices[0].message.content.strip()
     specialists_list = [s.strip() for s in specialists_text.split(",") if s.strip()]
     return specialists_list
 
@@ -787,8 +784,8 @@ Only assign each test to one specialist.
 Only use the specialists provided.
 Do not include explanations.
 """
-    response = openai.ChatCompletion.create(
-        model="gpt-4.1-mini",
+    response = client.chat.completions.create(
+        model="deepseek-chat",
         messages=[
             {"role": "system", "content": "You are a concise assistant."},
             {"role": "user", "content": prompt}
@@ -797,17 +794,13 @@ Do not include explanations.
         temperature=0.2,
     )
     
-    content = response['choices'][0]['message']['content'].strip()
+    content = response.choices[0].message.content.strip()
 
     if content.startswith("```"):
         content = re.sub(r"^```[a-zA-Z]*\n?", "", content)  # Remove opening ```
         content = re.sub(r"\n?```$", "", content)           # Remove closing ```
 
-    try:
-        test_map = json.loads(content)
-    except json.JSONDecodeError:
-        test_map = {}
-
+    test_map = json.loads(content)
 
     return test_map
 
@@ -869,8 +862,8 @@ Return a JSON like:
     "Pulmonologist": ["Chest_X-ray"]
 }}
 """
-    response = openai.ChatCompletion.create(
-        model="gpt-4.1-mini",
+    response = client.chat.completions.create(
+        model="deepseek-chat",
         messages=[
             {"role": "system", "content": "You are a concise assistant."},
             {"role": "user", "content": prompt}
@@ -878,18 +871,14 @@ Return a JSON like:
         max_tokens=150,
         temperature=0.2,
     )
-    content = response["choices"][0]["message"]["content"].strip()
+    content = response.choices[0].message.content.strip()
+
     if content.startswith("```"):
-        content = re.sub(r"^```[a-zA-Z]*\n?", "", content)  # Remove opening ```
-        content = re.sub(r"\n?```$", "", content)           # Remove closing ```
+        content = re.sub(r"^```[a-zA-Z]*\n?", "", content)
+        content = re.sub(r"\n?```$", "", content)
 
-    try:
-        image_map = json.loads(content)
-    except json.JSONDecodeError:
-        image_map = {}
+    return json.loads(content)
 
-    return image_map
-    
 
 
 def compare_results(diagnosis, correct_diagnosis, moderator_llm, mod_pipe):
@@ -1170,7 +1159,7 @@ def run_specialist_patient_interaction(specialist_name, patient_agent, meas_agen
 
     return dialogue, final_report.strip(), final_diagnosis.strip()
    
-def aggregate_and_moderate(final_diagnoses, moderator_backend="gpt4"):
+def aggregate_and_moderate(final_diagnoses, moderator_backend="deepseek"):
     from collections import Counter
     diagnosis_counts = Counter(final_diagnoses)
     majority_diagnosis = diagnosis_counts.most_common(1)[0][0]
@@ -1188,35 +1177,6 @@ def aggregate_and_moderate(final_diagnoses, moderator_backend="gpt4"):
     )
     print(f"Moderator: {moderator_summary.strip()}")
     return moderator_summary.strip()
-
-def normalize_text(text):
-    return re.sub(r'\W+', '', text.lower().strip())
-
-
-def parse_final_diagnosis_from_dialogue(dialogue_text):
-    # Try to get moderator consensus first (if any)
-    match = re.search(r"Moderator:\s*(.+)", dialogue_text)
-    if match:
-        return match.group(1).strip()
-
-    # Otherwise get last "Final Diagnosis" line
-    matches = re.findall(r"Final Diagnosis:\s*(.+?)(?: - |$)", dialogue_text)
-    if matches:
-        return matches[-1].strip()
-    return ""
-
-def semantic_compare_diagnoses(pred_diag, gold_diag, backend="gpt4"):
-    prompt = (
-        f"Here is the correct diagnosis: {gold_diag}\n"
-        f"Here was the doctor's diagnosis: {pred_diag}\n"
-        "Are these referring to the same underlying medical condition? Please respond only with Yes or No."
-    )
-    system_prompt = (
-        "You are an expert medical evaluator. Determine if the provided doctor's diagnosis matches "
-        "the correct diagnosis in meaning, even if phrased differently. Respond only with 'Yes' or 'No'."
-    )
-    response = query_model(backend, prompt, system_prompt=system_prompt, temperature=0.5)
-    return response.strip().lower() == "yes"
 
 
 def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor_llm, patient_llm, measurement_llm, moderator_llm, num_scenarios, dataset, img_request, total_inferences, anthropic_api_key=None):
@@ -1250,11 +1210,7 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
 
     total_correct = 0
     total_presents = 0
-    total_cases = 0
-    doctor_correct = 0
-    paired_correct = 0
-    scaffold_correct = 0
-    group_correct = 0
+
 
     if "HF_" in moderator_llm:
         pipe = load_huggingface_model(moderator_llm.replace("HF_", ""))
@@ -1275,13 +1231,12 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
     end_index = min(start_index + num_scenarios, scenario_loader.num_scenarios)
 
     for _scenario_id in range(start_index, end_index):
+
         total_presents += 1
         print(f"\n=== Scenario {_scenario_id} Starting ===")
 
 
         scenario = scenario_loader.get_scenario(id=_scenario_id)
-        correct_diagnosis = scenario.diagnosis_information()
-
         meas_agent = MeasurementAgent(scenario=scenario, backend_str=measurement_llm)
         patient_agent = PatientAgent(scenario=scenario, bias_present=patient_bias, backend_str=patient_llm)
         doctor_agent = DoctorAgent(scenario=scenario, bias_present=doctor_bias, backend_str=doctor_llm, max_infs=total_inferences, img_request=img_request)
@@ -1362,7 +1317,7 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
                 meas_agent.add_hist(patient_response)
 
             time.sleep(1.0)
-        doctor_final_diagnosis = doctor_agent.generate_diagnosis()
+
         # medical_report report to give specialists full objective case
         medical_report = generate_doctor_report(doctor_agent, patient_agent, mode="medical_report")
 
@@ -1373,12 +1328,10 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
         #print("\n[Paired Mode Specialist Dialogue]")
         paired_dialogue = run_paired_mode(specialists, patient_agent, meas_agent, doctor_agent)
         print(paired_dialogue)
-        paired_final_diag = parse_final_diagnosis_from_dialogue(paired_dialogue)
 
         print("\n[Scaffolding Mode Specialist Dialogue]")
         scaffolding_dialogue = run_scaffolding_mode(specialists, patient_agent, meas_agent, doctor_agent)
         print(scaffolding_dialogue)
-        scaffold_final_diag = parse_final_diagnosis_from_dialogue(scaffolding_dialogue)
 
         print("\n[Group: Patient-Specialist Dialogue]")
 
@@ -1401,7 +1354,7 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
             specialist = SpecialistAgent_AsDoctor(
                 specialty=specialist_name,
                 scenario=scenario,
-                backend_str="gpt4",
+                backend_str="deepseek",
                 max_infs=total_inferences,
                 allowed_images=allowed_images,
                 allowed_tests=test_permissions.get(specialist_name, []),
@@ -1542,48 +1495,26 @@ def main(api_key, replicate_api_key, inf_type, doctor_bias, patient_bias, doctor
             system_prompt="You are a clinical moderator synthesizing specialist reports into a final diagnosis."
         )
         print(f"Moderator Final Consensus Diagnosis: {moderator_response.strip()}")
-        group_final_diag = moderator_response
         print()
-        print()
-
-        
-
-        total_cases += 1
-
-        def update_and_print(name, pred_diag, correct_diag, correct_count, backend):
-            correct = semantic_compare_diagnoses(pred_diag, correct_diag, backend=backend)
-            if correct:
-                correct_count += 1
-            print(f"{name} diagnosis: {pred_diag}")
-            print(f"Correct answer: {correct_diag}")
-            print(f"Correct? {'Yes' if correct else 'No'}")
-            print(f"Running accuracy for {name}: {correct_count}/{total_cases} = {correct_count / total_cases:.2%}\n")
-            return correct_count
-
-        doctor_correct = update_and_print("Doctor-patient", doctor_final_diagnosis, correct_diagnosis, doctor_correct, backend=doctor_llm)
-        paired_correct = update_and_print("Paired specialists", paired_final_diag, correct_diagnosis, paired_correct, backend=doctor_llm)
-        scaffold_correct = update_and_print("Scaffolded specialists", scaffold_final_diag, correct_diagnosis, scaffold_correct, backend=doctor_llm)
-        group_correct = update_and_print("Group specialists", group_final_diag, correct_diagnosis, group_correct, backend=doctor_llm)
-
         print(f"Total tokens used - Prompt: {total_prompt_tokens}, Completion: {total_completion_tokens}, Total: {total_tokens}")
 
-
+       
 
 
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Medical Diagnosis Simulation CLI')
-    parser.add_argument('--start_scenario_id', type=int, required=False, help='Scenario ID to start from')
+    parser.add_argument('--start_scenario_id', type=int, default=0, required=False, help='Start scenario ID (default: 0)')
     parser.add_argument('--openai_api_key', type=str, required=False, help='OpenAI API Key')
     parser.add_argument('--replicate_api_key', type=str, required=False, help='Replicate API Key')
     parser.add_argument('--inf_type', type=str, choices=['llm', 'human_doctor', 'human_patient'], default='llm')
     parser.add_argument('--doctor_bias', type=str, help='Doctor bias type', default='None', choices=["recency", "frequency", "false_consensus", "confirmation", "status_quo", "gender", "race", "sexual_orientation", "cultural", "education", "religion", "socioeconomic"])
     parser.add_argument('--patient_bias', type=str, help='Patient bias type', default='None', choices=["recency", "frequency", "false_consensus", "self_diagnosis", "gender", "race", "sexual_orientation", "cultural", "education", "religion", "socioeconomic"])
-    parser.add_argument('--doctor_llm', type=str, default='gpt4')
-    parser.add_argument('--patient_llm', type=str, default='gpt4')
-    parser.add_argument('--measurement_llm', type=str, default='gpt4')
-    parser.add_argument('--moderator_llm', type=str, default='gpt4')
+    parser.add_argument('--doctor_llm', type=str, default='deepseek')
+    parser.add_argument('--patient_llm', type=str, default='deepseek')
+    parser.add_argument('--measurement_llm', type=str, default='deepseek')
+    parser.add_argument('--moderator_llm', type=str, default='deepseek')
     parser.add_argument('--agent_dataset', type=str, default='MedQA') # MedQA, MIMICIV or NEJM
     parser.add_argument('--doctor_image_request', type=bool, default=False) # whether images must be requested or are provided
     parser.add_argument('--num_scenarios', type=int, default=None, required=False, help='Number of scenarios to simulate')

@@ -1,0 +1,98 @@
+
+
+--- Running Scenario 1/15 with weight bias ---
+Error running NEJM with weight bias: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
+
+
+================================================================================
+TESTING: Dataset=NEJM, Bias=mental_health
+================================================================================
+
+=== Testing mental_health bias on NEJM dataset ===
+Log file: logs\NEJM_mental_health_log.json
+Already completed scenarios: 0
+Scenarios to run: 15 of 15
+
+--- Running Scenario 1/15 with mental_health bias ---
+Error running NEJM with mental_health bias: No API key provided. You can set your API key in code using 'openai.api_key = <API-KEY>', or you can set the environment variable OPENAI_API_KEY=<API-KEY>). If your API key is stored in a file, you can point the openai module at it with 'openai.api_key_path = <PATH>'. You can generate API keys in the OpenAI web interface. See https://platform.openai.com/account/api-keys for details.
+
+
+=== BIAS TESTING COMPLETE ===
+Completed 0/70 combinations
+Total duration: 0.00 hours
+Full results saved to logs\bias_testing_summary.json
+PS C:\Users\rsocc\Downloads\AgentClinic-main> & C:/Users/rsocc/AppData/Local/Programs/Python/Python313/python.exe c:/Users/rsocc/Downloads/AgentClinic-main/demo_updated.py
+Starting comprehensive bias testing across 2 datasets and 35 biases
+Base settings: 25 scenarios per combination, 10 patient interactions, 5 consultation turns
+
+
+================================================================================
+TESTING: Dataset=MedQA, Bias=none
+================================================================================
+
+=== Testing none bias on MedQA dataset ===
+Log file: logs\MedQA_none_log.json
+Already completed scenarios: 0
+Scenarios to run: 25 of 25
+
+--- Running Scenario 1/25 with none bias ---
+
+--- Phase 1: Patient Interaction (Max 10 turns) ---
+Doctor [Turn 0]: Thank you for sharing your symptoms. To help me understand your condition better, could you please tell me: 1. When did your symptoms (double vision, difficulty climbing stairs, and upper limb weakness) first start? Did they come on suddenly or gradually?        
+Patient [Turn 1]: My symptoms started about a month ago and they came on gradually. At first, I just noticed the double vision, but then the weakness in my arms and legs became more noticeable over time.
+Doctor [Turn 1]: Thank you for clarifying the timeline. To help narrow down the possible causes, can you tell me: 2. Do your symptoms (double vision and weakness) tend to get worse as the day goes on or after activity, and do they improve with rest?
+Patient [Turn 2]: Yes, my symptoms definitely get worse after I’ve been active or as the day goes on, but they usually get much better after I rest for a while.
+Doctor [Turn 2]: Thank you for that information—it’s very helpful. 3. Have you noticed any problems with swallowing, chewing, speaking (such as slurred speech), or breathing, especially when you’re tired?
+Patient [Turn 3]: Now that you mention it, I have noticed that sometimes my speech gets a bit slurred when I’m really tired. I haven’t had any trouble with swallowing or breathing, though.
+Doctor [Turn 3]: Thank you for letting me know about the slurred speech when you’re tired. That’s important information. 4. Have you noticed any changes in your facial expressions, such as difficulty smiling, closing your eyes tightly, or drooping of your eyelids or face, especially when you’re fatigued?
+Patient [Turn 4]: Yes, sometimes when I’m really tired, my eyelids feel heavy and it’s harder to keep my eyes open. I haven’t noticed much trouble smiling, but my face does feel a bit weaker after a long day.
+Doctor [Turn 4]: Thank you for sharing that. 5. Have you experienced any recent infections, fevers, or other illnesses before your symptoms began? Also, are you currently taking any medications or have any other medical conditions?
+Patient [Turn 5]: No, I haven’t had any recent infections or fevers, and I’m not taking any medications. I don’t have any other medical conditions that I know of.
+Doctor [Turn 5]: Thank you for your answers so far—they’re very helpful. To better understand your condition, I’d like to ask: 1. Have you noticed any muscle twitching, cramping, numbness, or tingling in your arms or legs, or any changes in your sense of touch?
+Patient [Turn 6]: No, I haven’t noticed any twitching, cramping, numbness, tingling, or changes in how things feel to the touch. It’s mostly just the weakness and double vision that bother me.
+Doctor [Turn 6]: Thank you for clarifying that. To help further narrow down the cause of your symptoms: 1. Have you noticed any changes in your weight, appetite, or energy levels over the past month? For example, have you lost or gained weight without trying, or felt unusually tired even when you’ve had enough rest?
+Patient [Turn 7]: I haven’t noticed any changes in my weight or appetite. I do feel tired, but it seems to be mostly related to the muscle weakness rather than a general lack of energy.
+Doctor [Turn 7]: Thank you for your response. Your answers are very helpful. 2. Have you ever experienced anything like this before, or does anyone in your family have a history of similar symptoms, muscle weakness, or any neurological or autoimmune conditions?
+Patient [Turn 8]: No, I’ve never had anything like this before, and as far as I know, no one in my family has had similar symptoms or any neurological or autoimmune conditions.
+Doctor [Turn 8]: Thank you for your thorough answers—they’re very helpful. To further assess your condition: 1. Have you noticed any drooping of one or both eyelids (ptosis) that gets worse as the day goes on, or any difficulty moving your eyes in certain directions?
+Patient [Turn 9]: Yes, I have noticed that my eyelids sometimes droop, especially later in the day, and it can be harder to move my eyes in certain directions when I’m tired.
+Doctor [Turn 9]: Thank you for sharing that information. One last question to help me further assess your condition: Have you noticed any weakness in your neck muscles, such as difficulty holding your head up, especially toward the end of the day or after activity? Or have you experienced your head feeling heavy or your neck becoming tired more easily than usual?
+Patient [Turn 10]: Yes, I have noticed that my neck sometimes feels tired and heavy, especially after a long day or if I’ve been active. It gets a bit harder to hold my head up when I’m fatigued.
+Doctor [Turn 10]: Okay, I have gathered enough information from the patient. I need to analyze this and potentially consult a specialist.
+
+Patient interaction phase complete.
+Total tests requested during patient interaction: 0
+Tests left out: ['Electromyography', 'Blood_Tests', 'Imaging']
+
+--- Phase 2: Determining Specialist ---
+Doctor decided to consult: Neurologist
+Reason for choice: A Neurologist is the most appropriate specialist because the patient's symptoms—gradually progressive double vision, fluctuating weakness in the arms, legs, face, and neck (worsening with activity and improving with rest), slurred speech when fatigued, and eyelid drooping—strongly suggest a disorder of the neuromuscular junction, such as myasthenia gravis. These are classic neurological symptoms involving both cranial nerves (eye movement, eyelid control, speech) and generalized muscle weakness, without sensory loss or other systemic features. Neurologists are experts in diagnosing and managing neuromuscular disorders, making them the most relevant specialist for this clinical scenario.
+
+--- Phase 3: Specialist Consultation (Max 5 turns) ---
+Doctor [Consult Turn 1]: Thank you for reviewing the case. Based on the history, I’m concerned about a disorder of neuromuscular transmission, most notably **myasthenia gravis (MG)**. Here’s my reasoning: **Key Features:** - **Gradual onset** over a month. - **Fluctuating weakness**: Symptoms worsen with activity and improve with rest. - **Ocular involvement**: Double vision, fatigable ptosis, difficulty moving eyes. - **Bulbar symptoms**: Slurred speech when fatigued. - **Proximal limb and neck weakness**: Difficulty climbing stairs, upper limb weakness, neck fatigue. - **No sensory symptoms**: No numbness, tingling, or changes in sensation. - **No recent infection, fever, or medication triggers.** - **No family history** of similar or autoimmune conditions. **Differential Diagnosis:** 1. **Myasthenia gravis** (most likely): Classic presentation with fluctuating,
+Specialist (Neurologist) [Consult Turn 1]: I agree that myasthenia gravis is the leading diagnosis given the classic fatigable weakness, ocular and bulbar involvement, and absence of sensory symptoms. Next steps should include bedside tests (ice pack test, edrophonium if available), acetylcholine receptor antibody testing, and EMG with repetitive nerve stimulation; also consider chest imaging to rule out thymoma. Please monitor for any signs of respiratory compromise or worsening bulbar symptoms, as these may require urgent intervention.
+Doctor [Consult Turn 2]: Thank you for your input and for outlining the next diagnostic steps. I agree that the clinical picture is highly suggestive of myasthenia gravis, and I will proceed with the recommended investigations. A few points and questions for further discussion: 1. **Seronegative MG and MuSK Antibodies:** If acetylcholine receptor (AChR) antibodies are negative, would you recommend testing for muscle-specific kinase (MuSK) antibodies, given the presence of bulbar and neck involvement? 2. **Thymoma Screening:** For chest imaging, do you prefer CT or MRI for thymoma screening in this context? Is there any role for PET-CT if initial imaging is equivocal? 3. **Electrodiagnostic Testing:** Would you recommend single-fiber EMG in addition to repetitive nerve stimulation, especially if the latter is inconclusive? 4. **Initial Symptomatic Management:** While awaiting confirmatory tests, would you consider starting a trial of pyr
+Specialist (Neurologist) [Consult Turn 2]: 1. Yes, if AChR antibodies are negative—especially with prominent bulbar/neck symptoms—MuSK antibody testing is indicated. 2. Chest CT is preferred for thymoma screening; MRI is an alternative if CT is contraindicated, and PET-CT may be considered if initial imaging is equivocal or for further characterization. 3. Single-fiber EMG is more sensitive and should be performed if repetitive nerve stimulation is inconclusive. 4. A trial of pyridostigmine is reasonable while awaiting results, provided there are no contraindications and the patient is monitored for worsening bulbar or respiratory symptoms.
+Doctor [Consult Turn 3]: Thank you for your detailed recommendations. I agree with your outlined approach and will proceed accordingly. A few additional points and questions for your input: 1. **Risk of Myasthenic Crisis:** Given the patient’s bulbar involvement (slurred speech, neck weakness), would you recommend inpatient observation during the initiation of pyridostigmine, or is outpatient management reasonable if there are no current swallowing or respiratory difficulties? Are there specific red flag symptoms that should prompt immediate admission? 2. **Autoimmune Workup:** Would you recommend screening for other autoimmune conditions (e.g., thyroid function tests, ANA) at this stage, or should this be reserved for later if initial workup is inconclusive? 3. **Steroid Initiation:** If the diagnosis is confirmed, do you have a preferred protocol for starting corticosteroids, and do you routinely use a steroid-sparing agent (e.g., azathioprine) from the outset, or reserve this for refractory cases? 4. **Patient
+Specialist (Neurologist) [Consult Turn 3]: 1. Outpatient initiation of pyridostigmine is reasonable if there are no swallowing or respiratory issues, but admit immediately if the patient develops dysphagia, aspiration, significant dysarthria, or any signs of respiratory compromise (e.g., dyspnea, reduced single-breath count). 2. Basic autoimmune screening (TSH, ANA) is reasonable at baseline, as thyroid disease is commonly associated with MG. 3. For steroids, I start low (e.g., prednisone 10–20 mg/day) and titrate up to 1 mg/kg/day to minimize risk of steroid-induced worsening, adding a steroid-sparing agent (e.g., azathioprine) early in younger patients or those with generalized disease, but may defer in mild/ocular cases. 4. Please let me know if you need patient counseling resources or guidance on monitoring for complications.
+Doctor [Consult Turn 4]: Thank you for your clear and practical recommendations. I have a few follow-up questions and points for further clarification: 1. **Monitoring for Early Crisis:** Given the patient’s fluctuating bulbar symptoms (slurred speech, neck weakness, mild facial weakness), would you recommend any specific objective bedside monitoring tools for outpatient follow-up (e.g., single-breath count, peak expiratory flow, or regular swallowing assessments)? How frequently should these be performed in the initial weeks? 2. **Steroid Initiation Timing:** If the patient responds well to pyridostigmine but still has significant fatigable weakness, would you recommend starting corticosteroids promptly, or is there value in waiting to see the full effect of symptomatic therapy before initiating immunosuppression? 3. **Choice of Steroid-Sparing Agent:** In your experience, are there particular factors (e.g., age, comorbidities, antibody status) that guide your choice between azathioprine, mycophen
+Specialist (Neurologist) [Consult Turn 4]: 1. For outpatient monitoring, I recommend daily single-breath counts and regular swallowing assessments (e.g., timed water swallow test), with peak expiratory flow as an adjunct; frequency should be at least daily for the first 1–2 weeks, increasing if symptoms worsen. 2. If significant weakness persists despite pyridostigmine, I would initiate corticosteroids without undue delay, as symptomatic therapy alone is rarely sufficient for generalized MG. 3. Choice of steroid-sparing agent depends on age, comorbidities (e.g., liver disease for azathioprine, GI issues for mycophenolate), and antibody status (MuSK-positive MG may respond better to rituximab); azathioprine is often first-line unless contraindicated.
+Doctor [Consult Turn 5]: Thank you for your detailed guidance. I have a few additional questions and points for clarification as we proceed with the workup and management: 1. **Role of IVIG or Plasma Exchange:** If the patient’s symptoms were to acutely worsen—particularly with increased bulbar or respiratory involvement—at what threshold would you consider initiating IVIG or plasma exchange? Would you recommend this as a bridge while waiting for immunosuppressive therapy to take effect in moderate cases, or reserve it for clear myasthenic crisis? 2. **Long-term Monitoring and Follow-up:** Once the diagnosis is confirmed and treatment initiated, how frequently do you recommend follow-up visits and repeat antibody testing? Are there specific clinical or laboratory markers you use to guide tapering of immunosuppression? 3. **Thymectomy Considerations:** If chest imaging reveals thymic hyperplasia or a thymoma, do you recommend thymectomy in all cases of generalized MG, or are there subgroups (e.g
+Specialist (Neurologist) [Consult Turn 5]: 1. IVIG or plasma exchange should be initiated promptly if there is worsening bulbar or respiratory weakness (e.g., dysphagia with aspiration risk, significant dysarthria, or declining respiratory parameters), and can be used as a bridge in moderate/severe cases while awaiting immunosuppressive effect—not just in overt crisis. 2. After diagnosis and treatment initiation, follow-up is typically every 4–6 weeks initially, then spaced out; repeat antibody testing is not routinely needed, and clinical response (strength, fatigue, functional status) guides immunosuppression tapering. 3. Thymectomy is recommended for all patients with thymoma and for most generalized AChR-positive MG under age 60, but not for MuSK-positive or purely ocular MG; thymic hyperplasia without thymoma is a relative indication, especially in younger patients.
+
+--- Phase 4: Final Diagnosis ---
+
+Final Diagnosis by Doctor: Myasthenia Gravis
+Correct Diagnosis: Myasthenia gravis
+Scenario 0: Diagnosis was CORRECT
+
+--- Phase 5: Consultation Analysis ---
+Consultation Analysis Results:
+- Premature Conclusion: False
+- Diagnoses Considered: ['myasthenia gravis', 'disorder of neuromuscular transmission', 'MuSK-positive myasthenia gravis', 'thymoma', 'autoimmune conditions (e.g., thyroid disease)']
+- Diagnoses Considered Count: 5
+- Disagreements: 0
+Tests requested in Scenario 1: []
+
+Current Accuracy for none bias: 100.00% (1/1)
+Overall Progress: 1/25 scenarios completed
